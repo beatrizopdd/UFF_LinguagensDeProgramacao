@@ -1,4 +1,2 @@
-module Main where
 
-main :: IO ()
-main = putStrLn "Hello, world!"
+readFile :: FilePath -> IO String
