@@ -3,6 +3,12 @@ abreArquivo caminho = do
   conteudo <- readFile caminho
   return (lines conteudo)
 
+escreveArquivo :: String -> [String] -> IO ()
+escreveArquivo caminho [] = appendFile caminho ""
+escreveArquivo caminho (linha:resto) = do
+  appendFile caminho (linha ++ "\n")
+  escreveArquivo caminho resto
+
 -- Conta caracteres diferentes
 cont_dif :: String -> String -> Int
 cont_dif [] [] = 0
@@ -31,5 +37,5 @@ main = do
     let result_igual = cont_igual "abobrinha" "abobora" --resultado do contador de caracteres iguais ok
     print result_igual 
 
-
-
+    -- B: abre o novo arquivo e adiciona uma linha
+    escreveArquivo "arquivos/novo.txt" ["um", "dois", "tres", "quatro"]
