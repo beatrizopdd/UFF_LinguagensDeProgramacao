@@ -24,6 +24,26 @@ cont_igual [] m = 0
 cont_igual o [] = 0
 cont_igual (ho:to) (hm:tm) | ho == hm  = 1 + cont_igual to tm | otherwise = cont_igual to tm
 
+-- Calcula a distância hamming
+hammingLinha :: String -> String -> IO Int
+--hammingLinha original modificado = do 
+--ele calcula o numero de caracteres iguais das duas linhas e depois divide esse numero pelo tamanho da maior linha 
+
+-- Calcula o diff-HA
+diffHA :: [String] -> [String] -> (Int, [String])
+--se o hammingLinha for menor que 25%, então ele considera uma nova linha
+--se for maior que 25% então considera uma linha alterada, que vai entrar no calculo da media
+diffHA (ho:to) (hm:tm) = do 
+let dist_linha = hammingLinha ho hm
+let media = 0
+if dist_linha < 25 then diffHA to (hm:tm) else diffHA to tm
+--se a linha for < 25: salva como (-) ho; se a linha for > 25: salva como (+) hm
+return 
+
+
+
+
+
 -- B: Onde ocorre a execução principal
 main :: IO ()
 main = do
