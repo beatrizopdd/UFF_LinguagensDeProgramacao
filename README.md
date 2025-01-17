@@ -1,3 +1,20 @@
+## Execução
+
+- Coloque os arquivos em ```app -> arquivos ```.
+- Escreva nas linhas 94 e 95 do script ```Main.hs``` o nome dos arquivos.
+- No powershell execute ```ghc -o main main.hs```
+- Após compilar execute ```.\main.exe```
+
+## Quem fez o que
+
+- Abrir arquivo: Beatriz
+- Contar caracteres diferentes: Júlia
+- Comparar o tamanho da string: Beatriz
+- Verificar se é uma linha inserida ou excluida: Beatriz
+- Formatação para impressão das linhas: Júlia
+- Lógica da média: Júlia
+- Função para integrar o cálculo das médias e análise das linhas: Beatriz e Júlia
+
 ## Como testar
 
 - Compila ```ghc -o main main.hs```
