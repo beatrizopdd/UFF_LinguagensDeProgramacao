@@ -9,7 +9,7 @@
 
 - Abrir arquivo: Beatriz
 - Contar caracteres diferentes: Júlia
-- Comparar o tamanho da string: Beatriz
+- Comparar o tamanho da string: Beatriz2
 - Verificar se é uma linha inserida ou excluida: Beatriz
 - Formatação para impressão das linhas: Júlia
 - Lógica da média: Júlia
